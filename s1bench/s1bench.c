@@ -127,7 +127,7 @@ void *workloop(void *arg)
 		for (j = 0; j < readmax; j++) {
 			junk += memp[0];
 			memp += stride;
-			if (memp > (mem + memsize))
+			if (memp >= (mem + memsize))
 				memp = mem;
 		}
 	}
